@@ -6,9 +6,6 @@ class StringBuilder {
   getValue() {
     return this.#value;
   }
-  setValue(newValue) {
-    return (this.#value = newValue);
-  }
   padEnd(str) {
     this.#value += str;
   }
@@ -16,8 +13,7 @@ class StringBuilder {
     this.#value = str + this.#value;
   }
   padBoth(str) {
-    this.padStart(str);
-    this.padEnd(str);
+    this.#value = str + this.#value + str;
   }
 }
 
